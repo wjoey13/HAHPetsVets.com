@@ -1,8 +1,11 @@
 <template>
   <div id="app">
 
+
+
     <b-container class="title">
       <b-row>
+        
         <b-col><img class="Logo1" src="./assets/Logo1.png" height="250" width="250"></b-col>
         <h1 class="heading">Heritage Animal Hospital</h1>
         
@@ -15,8 +18,28 @@
         
       </b-row>
     </b-container>
+
+    
 <br>
-    <NavBar />
+    <div class="NavBar">
+        <b-container class="NavBarButtons">
+      <button id="staff" @click="staff('staff')" class="button">
+          <img class="staffImg" src="./assets/staff.png" height=50px width=50px>
+        Staff
+        </button>
+
+        <button id="services" @click="services('services')" class="button">
+            <img class="servicesImg" src="./assets/services.png" height=50px width=50px>
+        Services
+        </button>
+
+        <button id="contact" @click="contact('contact')" class="button">
+            <img class="contactImg" src="./assets/contact.png" height=50px width=50px>
+        Contact Us
+        </button>
+        
+        </b-container>
+    </div>
 <br>
     <b-container class="header">
       <div class="col-md">
@@ -31,8 +54,8 @@
       </div>
     </b-container>
 
-    <b-container class="staffSection">
-      <h1>Staff</h1>
+    <b-container ref="staff" class="staffSection">
+      <h1 >Staff</h1>
       <b-row>
         <b-col><img src="#" height="250" width="350px"></b-col>
         <b-col>
@@ -74,7 +97,7 @@
       <br>
     </b-container>
 <br>
-    <b-container class="servicesContainer">
+    <b-container ref="services" class="servicesContainer">
       <h1 class="services">Services</h1>
       <b-row>
         <b-col>
@@ -96,8 +119,7 @@
           <b-button class="service"><img class="pill" src="./assets/pill.png" height=50px width=50px>Pain Management</b-button>
         </b-col>
         <b-col>
-          <b-button class="service"><img class="tick" src="./assets/CartoonTick.png" height=50px width=50px>Parasite
-            Prevention</b-button>
+          <b-button class="service"><img class="tick" src="./assets/CartoonTick.png" height=50px width=50px>Parasite Prevention</b-button>
         </b-col>
       </b-row>
       <br>
@@ -112,12 +134,16 @@
     </b-container>
     <br>
 
-    <b-container class="contact">
+    <b-container ref="contact" class="contact">
 
       <h1>Contact Us</h1>
-      <h4>Email: HAHPetVets.com</h4>
-      <h4>Phone: 720-870-8387</h4>
-      <h4>Location: 22651 E Aurora Parkway, Ste A-1</h4>
+      <b-row>
+      <b-col><h4>Email: HAHPetVets.com</h4></b-col>
+      <b-col><h4>Phone: 720-870-8387</h4></b-col>
+      </b-row>
+<br>
+      <b-col><h4>Location: 22651 E Aurora Parkway, Ste A-1</h4></b-col>
+      <br>
       <h5>Hours ( Monday - Sunday )</h5>
       <b-row>
         <b-col> 7 am - 5 pm</b-col>
@@ -128,7 +154,7 @@
         <b-col> 8am - 12 am</b-col>
         <b-col> 8am - 12 am</b-col>
       </b-row>
-
+<br>
     </b-container>
 <br>
     <b-container class="big">
@@ -136,52 +162,70 @@
       <b-container class="small">
         <b-row>
           <b-col>
-            <h1>Twitter</h1>
-            <h2 class="tweet">Tweet</h2>
+            <h2>Twitter</h2>
+            <h3 class="tweet">Tweet</h3>
 
           </b-col>
 
 
           <b-col>
-            <h1>Facebook</h1>
-            <h2 class="blog">Blog</h2>
+            <h2>Facebook</h2>
+            <h3 class="blog">Blog</h3>
           </b-col>
 
 
           <b-col>
-            <h1>Instagram</h1>
-            <h2 class="post">Post</h2>
+            <h2>Instagram</h2>
+            <h3 class="post">Post</h3>
           </b-col>
 
         </b-row>
       </b-container>
-      End
+      <br>
     </b-container>
 
 
-    <router-view :auth="auth" :authenticated="authenticated">
-    </router-view>
+    
   </div>
 </template>
 
 <script>
 
-import NavBar from './components/NavBar.vue'
-import StaffPage from './components/StaffPage.vue'
+
 import Vue from 'vue'
 import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
+
 
 Vue.use(BootstrapVue);
 
 export default {
   name: 'app',
   components: {
-    NavBar,
-    StaffPage
+  },
+  methods:{
+    staff(refName){
+      var element = this.$refs[refName];
+      console.log(element);
+      var top = element.offsetTop;
+      window.scrollTo(0, top)
+    },
+     services(refName){
+      var element = this.$refs[refName];
+      console.log(element);
+      var top = element.offsetTop;
+      window.scrollTo(0, top)
+    },
+    contact(refName){
+      var element = this.$refs[refName];
+      console.log(element);
+      var top = element.offsetTop;
+      window.scrollTo(0, top)
+    }
   }
 }
+
 </script>
 
 <style>
@@ -232,11 +276,9 @@ html{
   background-color: lightgreen;
   border: 3px solid tan;
 }
-.heading{
-  align-self: center;
-}
 .title{
-  background-color: tan;
+  background-image: url(./assets/background.png);
+
 }
 .contact{
   background-color: lightcoral;
@@ -245,7 +287,7 @@ html{
   background-color: lightgreen;
 }
 .big{
-  background-color: black;
+  background-color: lightcyan;
 }
 .small{
   background-color: white;
@@ -259,6 +301,13 @@ html{
 .post{
   border: solid 1px black;
 }
-
+h1{
+  color: white;
+  text-shadow: 1.5px 1.5px black;
+  font-family: 'Lato', sans-serif;
+}
+.Logo1{
+  display: flex;
+}
 
 </style>
