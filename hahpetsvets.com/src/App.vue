@@ -1,50 +1,157 @@
 <template>
   <div id="app">
-    <container>
-      <div class="Logo1">
-    <img src="./assets/Logo1.png">
-      </div>
-    </container>
-    <NavBar/>
+
+    <b-container class="title">
+      <b-row>
+        <b-col><img class="Logo1" src="./assets/Logo1.png" height="250" width="250"></b-col>
+        <b-col class="heading">
+          <h1>Heritage Animal Hospital</h1>
+        </b-col>
+      </b-row>
+    </b-container>
+<br>
+    <NavBar />
+<br>
     <b-container class="header">
-    <div class="col-md">
-     <h1>Heritage Animal Hospital</h1>
-     <h2>Located at 22651 E Aurora Parkway Suite A-1 Aurora, CO  80016</h2>
-     <br>
-     <p>At Heritage Animal Hospital, we believe in gaining the trust of client and patient alike.  We use the latest technology and provide the best treatment for your pet. Whether on two legs or four, everyone is treated like family.</p>
-     <br>
-     <p>You’ll see a list of our services in the menu to the right.  Feel free to browse around and ask any questions by clicking here to Contact Us.  We look forward to offering unparalleled service and medical care.</p>
-   </div>
-   </b-container>
+      <div class="col-md">
+        <h2>Located at 22651 E Aurora Parkway Suite A-1 Aurora, CO 80016</h2>
+        <br>
+        <p>At Heritage Animal Hospital, we believe in gaining the trust of client and patient alike. We use the latest
+          technology and provide the best treatment for your pet. Whether on two legs or four, everyone is treated like
+          family.</p>
+        <br>
+        <p>You’ll see a list of our services in the menu to the right. Feel free to browse around and ask any questions
+          by clicking here to Contact Us. We look forward to offering unparalleled service and medical care.</p>
+      </div>
+    </b-container>
 
-   <b-container class="staffSection">
-    <h1>Staff</h1>
-   <b-row>
-    <b-col><img src="#" height="450" width="350px"></b-col>
-    <b-col><h3>First Name</h3></b-col>
-    <b-col><h3>Last Name</h3></b-col>
-    <b-col><h3>Text Area</h3></b-col>
-    </b-row>
-  </b-container>
+    <b-container class="staffSection">
+      <h1>Staff</h1>
+      <b-row>
+        <b-col><img src="#" height="450" width="350px"></b-col>
+        <b-col>
+          <h3>First Name</h3>
+        </b-col>
+        <b-col>
+          <h3>Last Name</h3>
+        </b-col>
+        <b-col>
+          <h3>Desciption</h3>
+        </b-col>
+      </b-row>
+      <b-row>
+        <b-col><img src="#" height="450" width="350px"></b-col>
+        <b-col>
+          <h3>First Name</h3>
+        </b-col>
+        <b-col>
+          <h3>Last Name</h3>
+        </b-col>
+        <b-col>
+          <h3>Desciption</h3>
+        </b-col>
+      </b-row>
+      <b-row>
+        <b-col><img src="#" height="450" width="350px"></b-col>
+        <b-col>
+          <h3>First Name</h3>
+        </b-col>
+        <b-col>
+          <h3>Last Name</h3>
+        </b-col>
+        <b-col>
+          <h3>Desciption</h3>
+        </b-col>
+      </b-row>
+    </b-container>
+<br>
+    <b-container class="servicesContainer">
+      <h1 class="services">Services</h1>
+      <b-row>
+        <b-col>
+          <b-button class="service"><img class="brush" src="./assets/hairbrush.png" height=50px width=50px>Grooming</b-button>
+        </b-col>
+        <b-col>
+          <b-button class="service"><img class="needle" src="./assets/needle.png" height=50px width=50px>Vaccionations</b-button>
+        </b-col>
+        <b-col>
+          <b-button class="service"><img class="tooth" src="./assets/tooth.png" height=50px width=50px>Dental Care</b-button>
+        </b-col>
+      </b-row>
+      <br>
+      <b-row>
+        <b-col>
+          <b-button class="service"><img class="chip" src="./assets/CartoonChip.png" height=50px width=50px>Micro-Chipping</b-button>
+        </b-col>
+        <b-col>
+          <b-button class="service"><img class="pill" src="./assets/pill.png" height=50px width=50px>Pain Management</b-button>
+        </b-col>
+        <b-col>
+          <b-button class="service"><img class="tick" src="./assets/CartoonTick.png" height=50px width=50px>Parasite
+            Prevention</b-button>
+        </b-col>
+      </b-row>
+      <br>
+      <b-row>
+        <b-col>
+          <b-button class="service"><img class="chip" src="./assets/surgery.png" height=50px width=50px>Surgery</b-button>
+        </b-col>
+        <b-col>
+          <b-button class="service"><img class="pill" src="./assets/x-ray.png" height=50px width=50px>X-Ray</b-button>
+        </b-col>
+      </b-row>
+    </b-container>
+    <br>
 
-<b-container class="services">
-  <h1>Services</h1>
-  <b-row>
-    <b-col><b-button><img class="brush" src="./assets/cartoon brush.png" height=50px width=50px>Grooming</b-button></b-col>
-    <b-col><b-button><img class="needle" src="./assets/CartoonNeedle.png" height=50px width=50px>Vaccionations</b-button></b-col>
-    <b-col><b-button><img class="tooth" src="./assets/tooth.png" height=50px width=50px>Dental Care</b-button></b-col>
-  </b-row>
-  <br>
-  <b-row>
-    <b-col><b-button><img class="chip" src="./assets/CartoonChip.png" height=50px width=50px>Micro-Chipping</b-button></b-col>
-    <b-col><b-button><img class="pill" src="./assets/CartoonPill.png" height=50px width=50px>Pain Management</b-button></b-col>
-    <b-col><b-button><img class="tick" src="./assets/CartoonTick.png" height=50px width=50px>Parasite Prevention</b-button></b-col>
-  </b-row>
-</b-container>
-  
+    <b-container class="contact">
 
-     <router-view :auth="auth" :authenticated="authenticated">
-      </router-view>
+      <h1>Contact Us</h1>
+      <h4>Email: HAHPetVets.com</h4>
+      <h4>Phone: 720-870-8387</h4>
+      <h4>Location: 22651 E Aurora Parkway, Ste A-1</h4>
+      <h5>Hours ( Monday - Sunday )</h5>
+      <b-row>
+        <b-col> 7 am - 5 pm</b-col>
+        <b-col> 7 am - 5 pm</b-col>
+        <b-col> 7 am - 5 pm</b-col>
+        <b-col> 7 am - 5 pm</b-col>
+        <b-col> 7 am - 5 pm</b-col>
+        <b-col> 8am - 12 am</b-col>
+        <b-col> 8am - 12 am</b-col>
+      </b-row>
+
+    </b-container>
+<br>
+    <b-container class="big">
+      <h1>Follow Us</h1>
+      <b-container class="small">
+        <b-row>
+          <b-col>
+            <h1>Twitter</h1>
+            <h2 class="tweet">Tweet</h2>
+
+          </b-col>
+
+
+          <b-col>
+            <h1>Facebook</h1>
+            <h2 class="blog">Blog</h2>
+          </b-col>
+
+
+          <b-col>
+            <h1>Instagram</h1>
+            <h2 class="post">Post</h2>
+          </b-col>
+
+        </b-row>
+      </b-container>
+      End
+    </b-container>
+
+
+    <router-view :auth="auth" :authenticated="authenticated">
+    </router-view>
   </div>
 </template>
 
@@ -77,19 +184,18 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
-.Logo1{
-background-color: lightblue;
-padding-top: 5px;
-padding-bottom: 15px;
-}
 .staffSection{
   padding-top:50px;
 }
 .services{
   padding-top: 50px;
 }
+.servicesContainer{
+  background-color: lightblue;
+}
 .header{
   padding-top: 30px;
+  background-color: lightsalmon
 }
 .needle{
   padding-right: 5px;
@@ -108,5 +214,36 @@ padding-bottom: 15px;
 }
 .tick{
   padding-right: 5px;
+}
+.service{
+  background-color: tan;
+  border-color: black;
+}
+.heading{
+  align-self: center;
+}
+.title{
+  background-color: tan;
+}
+.contact{
+  background-color: lightcoral;
+}
+.staffSection{
+  background-color: lightgreen;
+}
+.big{
+  background-color: black;
+}
+.small{
+  background-color: white;
+}
+.tweet{
+  border: solid 1px black;
+}
+.blog{
+  border: solid 1px black;
+}
+.post{
+  border: solid 1px black;
 }
 </style>
