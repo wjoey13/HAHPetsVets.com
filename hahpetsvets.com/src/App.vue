@@ -4,9 +4,15 @@
     <b-container class="title">
       <b-row>
         <b-col><img class="Logo1" src="./assets/Logo1.png" height="250" width="250"></b-col>
-        <b-col class="heading">
-          <h1>Heritage Animal Hospital</h1>
-        </b-col>
+        <h1 class="heading">Heritage Animal Hospital</h1>
+        
+      <b-col class="pawPrints">
+      <img class="pawprint" src="./assets/pawprint.png">
+      <img class="pawprint" src="./assets/pawprint.png">
+      <img class="pawprint" src="./assets/pawprint.png">
+      </b-col>
+        
+        
       </b-row>
     </b-container>
 <br>
@@ -28,7 +34,7 @@
     <b-container class="staffSection">
       <h1>Staff</h1>
       <b-row>
-        <b-col><img src="#" height="450" width="350px"></b-col>
+        <b-col><img src="#" height="250" width="350px"></b-col>
         <b-col>
           <h3>First Name</h3>
         </b-col>
@@ -39,8 +45,9 @@
           <h3>Desciption</h3>
         </b-col>
       </b-row>
+      <br>
       <b-row>
-        <b-col><img src="#" height="450" width="350px"></b-col>
+        <b-col><img src="#" height="250" width="350px"></b-col>
         <b-col>
           <h3>First Name</h3>
         </b-col>
@@ -51,8 +58,9 @@
           <h3>Desciption</h3>
         </b-col>
       </b-row>
+      <br>
       <b-row>
-        <b-col><img src="#" height="450" width="350px"></b-col>
+        <b-col><img src="#" height="250" width="350px"></b-col>
         <b-col>
           <h3>First Name</h3>
         </b-col>
@@ -63,6 +71,7 @@
           <h3>Desciption</h3>
         </b-col>
       </b-row>
+      <br>
     </b-container>
 <br>
     <b-container class="servicesContainer">
@@ -176,6 +185,9 @@ export default {
 </script>
 
 <style>
+html{
+  background-color: lightgray;
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -183,6 +195,7 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  background-color: lightgray;
 }
 .staffSection{
   padding-top:50px;
@@ -216,8 +229,8 @@ export default {
   padding-right: 5px;
 }
 .service{
-  background-color: tan;
-  border-color: black;
+  background-color: lightgreen;
+  border: 3px solid tan;
 }
 .heading{
   align-self: center;
@@ -246,4 +259,6 @@ export default {
 .post{
   border: solid 1px black;
 }
+
+
 </style>
